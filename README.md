@@ -1,2 +1,2 @@
 # School-Project-1
-Simply a school project
+Simply my school project
