@@ -1,16 +1,146 @@
+/* Basic setup */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: powderblue;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #eef2ff;
+  background: linear-gradient(135deg, #1a2a3a, #243b55);
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+/* Header section */
+.header {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.sub {
+  margin-top: 0.4rem;
+  color: #c7d2fe;
+  font-size: 1rem;
+}
+
+/* Content area */
+.content {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.card p {
+  margin: 0.2rem 0 0;
+  color: #c7d2fe;
+  line-height: 1.6;
+}
+
+/* Images */
+.figure {
+  text-align: center;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 0.8rem;
+}
+
+.figure img:hover {
+  transform: translateY(-2px);
+}
+
+.caption {
+  color: #c7d2fe;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  color: #eef2ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  background: rgba(154, 230, 180, 0.15);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(154, 230, 180, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #9ae6b4;
+}
+
+
+@media (min-width: 760px) {
+  .content {
+    grid-template-columns: 1.1fr 0.9fr;
   }
+  
   h1 {
-    text-align: center;
-    color: rgb(59, 54, 117);
+    font-size: 2rem;
   }
-  p {
-    color: rgb(0, 0, 0);
-    text-align: center;
+  
+  .header {
+    padding: 1.5rem 2rem;
   }
-  img {
-    display: block;
-    margin: auto;
-    text-align: center;
+  
+  .content {
+    padding: 1.5rem 2rem;
   }
+}
